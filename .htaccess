@@ -1,0 +1,12 @@
+﻿AddDefaultCharset utf-8
+
+RewriteEngine on
+RewriteBase /webproject/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+AddDefaultCharset cp-1251
+ErrorDocument 404 /
+
+RewriteRule ^(.*)$ index.php
